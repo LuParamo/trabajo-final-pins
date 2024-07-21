@@ -35,7 +35,19 @@ header {
     border-color: #ffd0ea;
     color: #ffd0ea;
 }
-.iniciarsesion:hover {
+.iniciarsesionb {
+    grid-row: 1/4;
+    grid-column: 5/5;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color: #d80077;
+    border-color: #ffd0ea;
+    color: #ffd0ea;
+}
+.iniciarsesionb:hover {
     cursor: pointer;
     transform: scale(1.05);
     background-color: #ee3c9e;
@@ -108,6 +120,10 @@ header {
 }
 
 
+.iniciasesion {
+    margin-top: 82px;
+}
+
 /*index*/
 
 .Home {
@@ -123,35 +139,16 @@ body {
 
 /*box1, aplico grid para división en columnas y alineación de imágen*/
 
-
 .container {
-    background-color: #ffd739; /*2d0157, 6610f2, amarillo ffd739*/
-    color: #2d0157;
-    width: 80%;
-    margin-left: 10%;
-    display: grid;
-    grid-template-columns: 33% 33%;
-    margin-bottom: 20px;
-}
-.slider-text1 {
-    padding: 30px;
-    margin-top: 30px;
-    margin-left: 10%;
-    text-align: center;
-}
-.slider-text2 {
-    padding: 30px;
-    grid-column: 2/3;
-    margin-top: 30px;
-    margin-left: 10%;
-    text-align: center; 
+    display: flex;
+    flex-wrap: wrap;
 }
 .ruta {
-    width: 70%;
-    margin-right: 0%;
-    margin-left: 50px;
-    grid-column: 3/3;
-    grid-row: 1/3;
+        margin-top: 40px;
+        width: 80%;
+        height: 180px;
+        margin-bottom: 20px;
+        margin-left: 2%;
 }
 
 /*Presentación del programa*/
@@ -386,7 +383,7 @@ Imágenes con width 100% en contenedores de tamaño específico*/
 }
 .pins-titulo {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .flex-container {

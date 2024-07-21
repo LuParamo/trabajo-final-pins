@@ -7,7 +7,11 @@ const header = () => {
     return (
     <div className="header">
         <header>
-        <button className= "iniciarsesion">Inicia Sesión</button>
+        <Link to="iniciarsesion" className='iniciarsesion'>
+        <button className= "iniciarsesionb">
+          Inicia Sesión
+          </button>
+        </Link>
     <nav className="navbar">
       <div className="head">
         <Link to="Home">

@@ -2,7 +2,6 @@ import "./estilos.css"
 import Footer from './footer.jsx'
 import React, { useState } from 'react'
 
-
 const Registrate = () => {
     return (
         <div className="Registrate">
@@ -66,7 +65,6 @@ const Formulario = () => {
       const selectedCiudad = e.target.value;
       setCiudad(selectedCiudad);
     };
-  
     const manejarCambiosEnCheck = (event) => {
         setEstaChequeado(event.target.checked)
     }
@@ -97,7 +95,7 @@ const Formulario = () => {
 return (
     <div className="form-contenedor">
             <h2 className="titulo-form">Tus Datos</h2>
-    <form onSubmit={manejarEnvioForm} className="form" href="https://formspree.io/f/xeqydabz" method="POST" target="_blank">
+    <form className="form" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
         <div>
             <input 
                 type="text"
@@ -105,13 +103,14 @@ return (
                 value={nombre}
                 placeholder="Nombre y Apellido"
                 onChange={manejarCambiosEnNombre}
+                name="nombre"
             />
             {errores.nombre && <span style={{ color: 'red' }}>{errores.nombre}</span>}
         </div>
         <br/>
         <div>
             <input 
-                type="text"
+                type="text" name="dni"
                 className="box item2"
                 value={DNI}
                 placeholder="DNI"
@@ -121,7 +120,7 @@ return (
         </div>
         <div>
             <input 
-                type="text"
+                type="text" name="nacimiento"
                 className="box item3"
                 value={nacimiento}
                 placeholder="Fecha de nac. DD/MM/AAAA"
@@ -131,7 +130,7 @@ return (
         </div>
         <div>
             <input 
-                type="text"
+                type="text" name="dire"
                 className="box item4"
                 value={direccion}
                 placeholder="Dirección"
@@ -141,7 +140,7 @@ return (
         </div>
         <div>
             <input 
-                type="text"
+                type="text" name="tel"
                 className="box item5" 
                 value={telefono}
                 placeholder="Teléfono"
@@ -161,7 +160,6 @@ return (
           <option value="opcion7">Tierra del Fuego</option>
         </select>
       </form>
-
       <form className="box" name="f2" action="#">
         <select value={ciudad} onChange={cambioCiudad} name="Ciudad" className="item9">
           <option value="">Ciudad</option>
@@ -172,7 +170,7 @@ return (
       </form>
         <div>
             <input
-                type="email"
+                type="email" name="mail"
                 className="box item7"
                 value={correo}
                 placeholder="E-mail"
@@ -183,7 +181,7 @@ return (
         <br/>
         <div>
             <input
-                type="email"
+                type="email" name="mail2"
                 className="box item8"
                 value={correo}
                 placeholder="Reconfirmar E-mail"
@@ -202,7 +200,7 @@ return (
                 ¡Quiero recibir promos!
             </label>
         </form>
-        <button type="submit" className="submit">Enviar</button>
+        <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar</button>
     </form>
 </div>
 

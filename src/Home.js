@@ -1,22 +1,29 @@
 import React from 'react'
-import ruta from './img/ruta-pins.jpg'
 import "./estilos.css"
 import Footer from './footer.jsx'
-import Pins from './Pins.js'
-import Registrate from './Registrate.js'
-import imgfondo from './img/wall-aviones.jpg'
-import {Routes, Route } from 'react-router-dom'
+import Slider from './compslider/Slider.jsx'
+import slide1 from './compslider/slider.PNG'
+import slide2 from './compslider/slider2.PNG'
+import slide3 from './compslider/slider3.PNG'
+import slide4 from './compslider/slider4.PNG'
+import Ruta from './img/ruta2.PNG'
 
 
 const Home = () => {
+    const imgslider = [
+      [slide1],
+      [slide2],
+      [slide3],
+      [slide4],
+    ];
+
     return (
     <div className="Home">
+      <div className='container'>
+            <Slider imagenes={imgslider}/>
+            <img className="ruta" src={Ruta} alt="banner" />
+        </div>
         <React.Fragment>
-    <div className="container"> 
-        <h2 className="slider-text1">¿Querés llenar tu mochila de recuerdos?</h2>
-        <img src={ruta} alt="Ruta" className="ruta" />
-    <h2 className="slider-text2">¡Coleccioná Pins y llegá cada vez más lejos!</h2>
-</div>
   <div className="presentación">
     <h2 class="titulopres">¡Con Pins descubrí una nueva forma de ahorrar para tu próximo viaje!</h2>
     <br />
@@ -43,6 +50,8 @@ const Home = () => {
   </div>
 
   )
+
+
 }
 
 export default Home;

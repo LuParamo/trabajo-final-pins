@@ -1,4 +1,4 @@
-import Carousel from 'react-bootstrap/Carousel'
+import Carrusel from './Carousel1.jsx'
 import PinRosa from './img/Pin-Avion-Rosa.PNG'
 import PinAvianca from './img/Pin-Avianca.PNG'
 import PinExplore from './img/Pin-Explore.PNG'
@@ -11,6 +11,12 @@ import PinWingo from './img/Pin-Wingo.PNG'
 import PinViajeros from './img/Pins-viajeros.PNG'
 import Footer from './footer.jsx'
 
+
+const imgcarrusel = [
+    [PinCalaca],
+    [PinFrida],
+    [PinHomero],
+  ];
 
 const Pins = () => {
     return (
@@ -38,9 +44,8 @@ const Pins = () => {
             <p className="p-flex">$4.000,00</p>
             <p className="p-flex">Millas: 800</p>
         </div></a>
-        {/* <!-- Aplica Carousel de bootstrap para imágenes de venta --> */}
-    <a className="flex" href="#">
-    <Carousel />
+     <a className="flex" href="#">
+        <Carrusel imagenes={imgcarrusel}/>
             <p className="p-flex">Colección México</p>
                 <p className="p-flex">$30.000,00</p>
                 <p className="p-flex">Millas: 16.000</p>
@@ -80,26 +85,5 @@ const Pins = () => {
     )
 }
 
-function UncontrolledExample() {
-    return (
-<Carousel>
-      <Carousel.Item>
-        <Carousel.Caption>
-                <img src={PinCalaca} className="d-block img-flex" id="carouselitem" alt="Pin Calaca" />
-            </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Carousel.Caption>
-                <img src={PinFrida} className="d-block img-flex" id="carouselitem" alt="Pin Frida" />
-            </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-            <Carousel.Caption>
-                <img src={PinHomero} className="d-block img-flex" id="carouselitem" alt="Pin Homero" />  
-            </Carousel.Caption>
-        </Carousel.Item>
-    </Carousel>
-    )
-}
 
 export default Pins
