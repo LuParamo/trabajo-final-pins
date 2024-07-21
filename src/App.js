@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+// import ruta from './img/ruta-pins.jpg'
+// import Header from './header.jsx'
+// import Footer from './footer.jsx'
+import imgfondo from './img/wall-aviones.jpg'
+import "./estilos.css"
+import {Routes, Route } from 'react-router-dom'
+import Header from './header'
+import Pins from './Pins'
+import Registrate from './Registrate'
+import Home from './Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App ()  {
+    return (
+      <div>
+      <Routes>
+        <Route path='/' element={<Header />}>
+          <Route path='Registrate' element={<Registrate />}></Route>
+          <Route path='Pins' element={<Pins />}></Route>
+          <Route path='Home' element={<Home />}></Route>
+        </Route>
+      </Routes>
+      </div>
+      
+  )
 }
 
 export default App;
