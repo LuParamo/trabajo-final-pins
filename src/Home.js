@@ -44,7 +44,7 @@ const Home = () => {
     <p2 className="p2">2. Cada Pin suma la cantidad de millas indicada</p2>
     <p3 className="p3">3. Juntá millas y canjealas por tu destino favorito</p3>
     </div>
-    <a className="comencemos" href="Registrate.html">Comencemos</a>
+    <a className="comencemos" href="Registrate">Comencemos</a>
     </React.Fragment>
     <Footer />
   </div>

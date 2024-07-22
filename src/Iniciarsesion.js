@@ -1,13 +1,11 @@
 import "./estilos.css"
 import Footer from './footer.jsx'
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 
 const Login = () => {
     return (
-        <div className="Iniciasesion">
-            <React.Fragment>
-            <h2 class="formulario-ok">Una vez que recibamos tus datos te enviaremos un mail de confirmación de alta</h2>
-            </React.Fragment>
+        <div className="Inicia">
             <IniciaSesion />
             <Footer />
         </div>
@@ -32,6 +30,7 @@ const validarFormulario = () => {
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(correo)) {
         nuevosErrores.correo = 'El correo no es válido'
     }
+}
     const manejarEnvioForm = (event) => {
         event.preventDefault ()
         if (validarFormulario()) {
@@ -40,19 +39,10 @@ const validarFormulario = () => {
     }
 
     return (
-        <div className="form-contenedor">
-                <h2 className="titulo-form">Tus Datos</h2>
+        <div className="sesioncontenedor">
+            <div className="sesioncontenedorhijo1">
+                <h2 className="titulo-form">Iniciá Sesión</h2>
         <form className="form" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
-            <div>
-                <input 
-                    type="text"
-                    className="box item1"
-                    value={contrasena}
-                    placeholder="Contraseña"
-                    onChange={manejarCambiosEnContrasena}
-                    name="contrasena"/>
-            </div>
-            <br/>
             <div>
                 <input
                     type="email" name="mail"
@@ -63,12 +53,34 @@ const validarFormulario = () => {
                 />
             </div>
             <br/>
-            <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar</button>
+            <div>
+                <input 
+                    type="text"
+                    className="box item1"
+                    value={contrasena}
+                    placeholder="Contraseña"
+                    onChange={manejarCambiosEnContrasena}
+                    name="contrasena"/>
+            </div>
+            <br/>
+            <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar
+                
+            </button>
+
+            <h4>¿Todavía no te registraste?</h4>
+            <a className="submit2" href="Registrate">Registrate</a>
         </form>
+        </div>
+        <div className="sesioncontenedorhijo2">
+            <img/>
+        </div>
     </div>
     )
 }
-}
+
+
+
+
 
 
 export default Login

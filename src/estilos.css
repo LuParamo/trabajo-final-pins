@@ -361,6 +361,20 @@ body {
     height: 30px;
     margin: 10px auto;
 }
+.submit2 {
+    background-color: #d80077;
+    font-size: 15px;
+    color: #fff;
+    grid-column: 1/3;
+    width: 35%;
+    border: 0px;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px auto;
+    text-align: center;
+    text-decoration: none;
+}
 .formulario-ok {
     font-family: "Poppins", sans-serif;
     font-weight: 500;

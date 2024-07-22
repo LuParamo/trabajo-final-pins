@@ -16,7 +16,7 @@ function App ()  {
           <Route path='Registrate' element={<Registrate />}></Route>
           <Route path='Pins' element={<Pins />}></Route>
           <Route path='Home' element={<Home />}></Route>
-          <Route path='Inicia Sesion' element={<IniciarSesion />}></Route>
+          <Route path='IniciarSesion' element={<IniciarSesion />}></Route>
         </Route>
       </Routes>
       </div>
