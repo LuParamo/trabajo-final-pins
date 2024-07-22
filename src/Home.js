@@ -8,7 +8,7 @@ import slide3 from './compslider/slider3.PNG'
 import slide4 from './compslider/slider4.PNG'
 import Ruta from './img/ruta2.PNG'
 
-
+// La const imgslider llama a todas las imagenes que forman parte del componente slider
 const Home = () => {
     const imgslider = [
       [slide1],
@@ -20,10 +20,16 @@ const Home = () => {
     return (
     <div className="Home">
       <div className='container'>
+        <div>
             <Slider imagenes={imgslider}/>
-            <img className="ruta" src={Ruta} alt="banner" />
+            {/* Todos los estilos y componentes del slider estan en la carpeta compslider */}
         </div>
-        <React.Fragment>
+        <div >
+        <img className="ruta" src={Ruta} alt="banner" />
+        </div>
+      </div>
+      {/* todo el body del index.html se encuentra en los react.fragments */}
+      <React.Fragment>
   <div className="presentación">
     <h2 class="titulopres">¡Con Pins descubrí una nueva forma de ahorrar para tu próximo viaje!</h2>
     <br />
@@ -44,6 +50,7 @@ const Home = () => {
     <p2 className="p2">2. Cada Pin suma la cantidad de millas indicada</p2>
     <p3 className="p3">3. Juntá millas y canjealas por tu destino favorito</p3>
     </div>
+    {/* boton comencemos te lleva a la pestaña de registro */}
     <a className="comencemos" href="Registrate">Comencemos</a>
     </React.Fragment>
     <Footer />

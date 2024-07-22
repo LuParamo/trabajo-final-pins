@@ -7,6 +7,7 @@ function Carrusel({ imagenes }) {
     useEffect(() => {
         const intervalId = setInterval(siguiente, 3000);
     })
+    // a veces se vuelve loquito y titila o cambia mas rapido de lo normal, es como un +30 estresado
 
     const [imagenActual, setImagenActual] = React.useState(0);
     const cantidad = imagenes?.length;
@@ -23,7 +24,7 @@ function Carrusel({ imagenes }) {
                 return (
                     <div> 
                     {imagenActual == index && (
-                        <img className='d-block img-flex' key={index} src={imagen} alt="imagen"/>
+                        <img className='d-block img-flex' key={index} src={imagen} alt="imagen" />
                     )}
                     </div>
                 );

@@ -1,7 +1,6 @@
 import "./estilos.css"
 import Footer from './footer.jsx'
 import React, { useState } from 'react'
-import { Link } from "react-router-dom"
 
 const Login = () => {
     return (
@@ -41,8 +40,8 @@ const validarFormulario = () => {
     return (
         <div className="sesioncontenedor">
             <div className="sesioncontenedorhijo1">
-                <h2 className="titulo-form">Iniciá Sesión</h2>
-        <form className="form" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
+                <h2 className="titulo-sesion">Iniciá Sesión</h2>
+        <form className="formsesion" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
             <div>
                 <input
                     type="email" name="mail"
@@ -56,7 +55,7 @@ const validarFormulario = () => {
             <div>
                 <input 
                     type="text"
-                    className="box item1"
+                    className="box item7"
                     value={contrasena}
                     placeholder="Contraseña"
                     onChange={manejarCambiosEnContrasena}
@@ -64,15 +63,12 @@ const validarFormulario = () => {
             </div>
             <br/>
             <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar
-                
             </button>
 
-            <h4>¿Todavía no te registraste?</h4>
-            <a className="submit2" href="Registrate">Registrate</a>
+            <h4 className="registroinicio">
+                ¿Todavía no te registraste?</h4>
+            <a className="submit" href="Registrate">Registrate</a>
         </form>
-        </div>
-        <div className="sesioncontenedorhijo2">
-            <img/>
         </div>
     </div>
     )

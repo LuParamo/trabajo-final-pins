@@ -138,17 +138,19 @@ body {
 
 
 /*box1, aplico grid para división en columnas y alineación de imágen*/
-
+/* aplica al flex del slider + banner fijo */
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .ruta {
         margin-top: 40px;
-        width: 80%;
-        height: 180px;
+        width: 95%;
+        height: 200px;
         margin-bottom: 20px;
-        margin-left: 2%;
+        margin-right: 2%;
+        border-radius: 20px;
 }
 
 /*Presentación del programa*/
@@ -157,6 +159,8 @@ body {
     text-align: center;
     width: 80%;
     margin-left: 10%;
+    background-color: rgb(255, 215, 57, 0.7);    /* da traslucencia al fondo del texto para que no se pierda con el background */
+    border-radius: 20px;
 }
 .titulopres {
     color: #d80077;
@@ -429,6 +433,12 @@ Imágenes con width 100% en contenedores de tamaño específico*/
     transition: all .05s ease-in .05s;
 }
 .p-flex {
+    display: block;
+    text-align: center;
+    color: #2d0157;
+    text-decoration: #2d0157;
+}
+.contador {
     display: block;
     text-align: center;
     color: #2d0157;
