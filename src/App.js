@@ -1,6 +1,6 @@
 import React from 'react'
 import "./estilos.css"
-import {Routes, Route } from 'react-router-dom'
+import {Routes, Route, Navigate } from 'react-router-dom'
 import Header from './header'
 import Pins from './Pins'
 import Registrate from './Registrate'
@@ -12,7 +12,8 @@ function App ()  {
     return (
       <div>
       <Routes>
-        <Route path='/' element={<Header />}>
+      <Route path="/" element={<Navigate to="/Home" />} />
+      <Route element={<Header />}>
           <Route path='Registrate' element={<Registrate />}></Route>
           <Route path='Pins' element={<Pins />}></Route>
           <Route path='Home' element={<Home />}></Route>

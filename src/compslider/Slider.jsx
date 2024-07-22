@@ -17,8 +17,6 @@ const siguiente = () => {
 const anterior = () => {
     setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
 };
-
-
     
     return (
         <div className='containerslider'>
@@ -27,7 +25,7 @@ const anterior = () => {
                 return (
                     <div>
                     {imagenActual == index && (
-                        <img key={index} src={imagen} alt="imagen"/>
+                        <img key={index} src={imagen} alt="imagen" className='sliderimg'/>
                     )}
                     </div>
                     

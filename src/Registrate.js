@@ -16,20 +16,7 @@ const Registrate = () => {
 }
 
 const Formulario = () => {
-    const [nombre, setNombre] = useState('')
-    const [DNI, setDNI] = useState('')
-    const [nacimiento, setNacimiento] = useState('')
-    const [direccion, setDireccion] = useState('')
-    const [telefono, setTelefono] = useState('')
-    const [correo, setCorreo] = useState('')
-    const [provincia, setProvincia] = useState('');
-    const [ciudad, setCiudad] = useState('');
-    const [errores, setErrores] = useState({})
-    const [estaChequeado, setEstaChequeado] = useState(false)
-    const [estaChequeado2, setEstaChequeado2] = useState(false)
-
     const Ciudad = [
-        [],
         ["-", "Capital", "Alta Gracia", "Carlos Paz", "Rio Tercero", "Rio Cuarto", "Villa Maria"], // Provincia 1 (Córdoba)
         ["-", "Capital Federal", "Tandil", "La Plata", "Merlo", "Pilar"], // Provincia 2 (Buenos Aires)
         ["-", "San Fernando del Valle de Catamarca", "Fray Mamerto Esquiú", "Recreo", "Tinogasta"], // Provincia 3 (Catamarca)
@@ -38,6 +25,18 @@ const Formulario = () => {
         ["-", "Bariloche", "Cipolletti", "Godoy", "Villa Regina"], // Provincia 6 (Río Negro)
         ["-", "Rio Grande", "San Sebatián", "Tolhuin", "Ushuaia"] // Provincia 7 (Tierra del Fuego)
       ];
+
+    const [nombre, setNombre] = useState('')
+    const [DNI, setDNI] = useState('')
+    const [nacimiento, setNacimiento] = useState('')
+    const [direccion, setDireccion] = useState('')
+    const [telefono, setTelefono] = useState('')
+    const [correo, setCorreo] = useState('')
+    const [provincia, setProvincia] = useState(0);
+    const [ciudad, setCiudad] = useState('');
+    const [errores, setErrores] = useState({})
+    const [estaChequeado, setEstaChequeado] = useState(false)
+    const [estaChequeado2, setEstaChequeado2] = useState(false)
 
     const manejarCambiosEnNombre = (event) => {
         setNombre(event.target.value)
@@ -58,12 +57,10 @@ const Formulario = () => {
         setCorreo(event.target.value)
     }
     const cambioProvincia = (e) => {
-      const selectedProvincia = e.target.value;
-      setProvincia(selectedProvincia);
+      setProvincia(parseInt(e.target.value));
     };
     const cambioCiudad = (e) => {
-      const selectedCiudad = e.target.value;
-      setCiudad(selectedCiudad);
+        setCiudad (e.target.value);
     };
     const manejarCambiosEnCheck = (event) => {
         setEstaChequeado(event.target.checked)
@@ -151,13 +148,13 @@ return (
         <form className="box" name="f1" action="#">
         <select value={provincia} onChange={cambioProvincia} name="provincia" className="item6">
           <option value="0">Provincia</option>
-          <option value="opcion1">Córdoba</option>
-          <option value="opcion2">Buenos Aires</option>
-          <option value="opcion3">Catamarca</option>
-          <option value="opcion4">Salta</option>
-          <option value="opcion5">Mendoza</option>
-          <option value="opcion6">Río Negro</option>
-          <option value="opcion7">Tierra del Fuego</option>
+          <option value="1">Córdoba</option>
+          <option value="2">Buenos Aires</option>
+          <option value="3">Catamarca</option>
+          <option value="4">Salta</option>
+          <option value="5">Mendoza</option>
+          <option value="6">Río Negro</option>
+          <option value="7">Tierra del Fuego</option>
         </select>
       </form>
       <form className="box" name="f2" action="#">
