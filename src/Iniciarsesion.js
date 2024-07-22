@@ -38,10 +38,17 @@ const validarFormulario = () => {
     }
 
     return (
+<<<<<<< HEAD
         <div className="form-section">
             <div className="form-contenedor">
                 <h2 className="titulo-form">Iniciá Sesión</h2>
         <form className="form" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
+=======
+        <div className="sesioncontenedor">
+            <div className="sesioncontenedorhijo1">
+                <h2 className="titulo-sesion">Iniciá Sesión</h2>
+        <form className="formsesion" action="https://formspree.io/f/xovajjvp" method="POST" target="_blank">
+>>>>>>> bb8bada7678879332f89aca9ef5c968d3e3b6855
             <div>
                 <input
                     type="email" name="mail"
@@ -62,9 +69,18 @@ const validarFormulario = () => {
                     name="contrasena"/>
             </div>
             <br/>
+<<<<<<< HEAD
             <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Entrar
             </button>
             <a className="submit2" href="Registrate">Todavía no te registraste?</a>
+=======
+            <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar
+            </button>
+
+            <h4 className="registroinicio">
+                ¿Todavía no te registraste?</h4>
+            <a className="submit" href="Registrate">Registrate</a>
+>>>>>>> bb8bada7678879332f89aca9ef5c968d3e3b6855
         </form>
         </div>
     </div>
