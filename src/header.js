@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from './img/Logo-fucsia.png'
 import "./estilos.css"
 import { Outlet, Link } from "react-router-dom"
 
-const header = () => {
+function Header () {
+  const [isOpen, setIsOpen] = useState(false)
+
     return (
     <div className="header">
         <header>
@@ -13,18 +15,19 @@ const header = () => {
           </button>
         </Link>
     <nav className="navbar">
-      <div className="head">
-        <Link to="Home">
+      <Link to="Home">
           <img src={logo} alt="Pins" width="80px" height="80px" align="left" />
         </Link>
+      <div className={`head ${isOpen && 'open'}`}>
         <Link to="/Registrate" className="registratehead">
           Regístrate
         </Link>
-        <Link to="Promociones" className="promocioneshead">
-          Promociones
-        </Link>
         <Link to="/Pins" className="pinshead">
           Pins
+        </Link>
+        {/* de aca para abajo no estan desarrolladas las pestañas, si bien los links están cargados */}
+        <Link to="Promociones" className="promocioneshead">
+          Promociones
         </Link>
         <Link to="ClubPins" className="clubpinshead">
           Club Pins
@@ -36,6 +39,11 @@ const header = () => {
           Bancos Asociados
         </Link>
       </div>
+      <div className={`hamburguesa ${isOpen && 'open'}`} onClick={ () => setIsOpen(!isOpen)}>
+        <span />
+        <span />
+        <span />
+      </div>
     </nav>
   </header>
   <hr />
@@ -44,4 +52,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header

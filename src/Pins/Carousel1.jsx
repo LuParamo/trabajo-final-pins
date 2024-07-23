@@ -1,4 +1,4 @@
-import './estilos.css'
+import '../estilos.css'
 import React, { useEffect } from 'react'
 
 
@@ -7,7 +7,7 @@ function Carrusel({ imagenes }) {
     useEffect(() => {
         const intervalId = setInterval(siguiente, 3000);
     })
-    // a veces se vuelve loquito y titila o cambia mas rapido de lo normal, es como un +30 estresado
+    // a veces se vuelve loquito y titila o cambia más rápido de lo normal, es como un +30 estresado
 
     const [imagenActual, setImagenActual] = React.useState(0);
     const cantidad = imagenes?.length;

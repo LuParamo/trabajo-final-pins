@@ -10,6 +10,7 @@
 
 /*header aplica position fixed para acompañamiento de la barra nav por todo el scroll */
 
+
 header {
     background-color: #d80077;
     width: 100%;
@@ -18,9 +19,11 @@ header {
     z-index: 1000;
     display: grid;
     grid-row: 25%;
-    grid-column: 30% 60% 10% ;
+    grid-column: 60% 35% 05% ;
 }
-
+.head {
+    margin-top: 20px;
+}
 .iniciarsesion {
     grid-row: 1/4;
     grid-column: 5/5;
@@ -55,7 +58,7 @@ header {
 .registratehead {
     text-decoration: none;
     color: #2d0157;
-    margin-left: 15%;
+    margin: 20px;
     grid-row: 2/4;
     grid-column: 1/5;
 }
@@ -65,7 +68,7 @@ header {
 }
 .pinshead {
     text-decoration: none;
-    margin-left: 20px;
+    margin: 20px;
     color: #2d0157;
     grid-row: 2/4;
     grid-column: 1/5;
@@ -76,7 +79,7 @@ header {
 }
 .bancoshead {
     text-decoration: none;
-    margin-left: 20px;
+    margin: 20px;
     color: #2d0157;
     grid-row: 2/4;
     grid-column: 1/5;
@@ -87,7 +90,7 @@ header {
 }
 .giftpinshead {
     text-decoration: none;
-    margin-left: 20px;
+    margin: 20px;
     color: #2d0157;
     grid-row: 2/4;
     grid-column: 1/5;
@@ -98,7 +101,7 @@ header {
 }
 .promocioneshead {
     text-decoration: none;
-    margin-left: 20px;
+    margin: 20px;
     color: #2d0157;
     grid-row: 2/4;
     grid-column: 1/5;
@@ -109,7 +112,7 @@ header {
 }
 .clubpinshead {
     text-decoration: none;
-    margin-left: 20px;
+    margin: 20px;
     color: #2d0157;
     grid-row: 2/4;
     grid-column: 1/5;
@@ -436,6 +439,7 @@ Imágenes con width 100% en contenedores de tamaño específico*/
     text-align: center;
     color: #2d0157;
     text-decoration: #2d0157;
+    margin-bottom: 10px;
 }
 .contador {
     display: block;
@@ -444,6 +448,14 @@ Imágenes con width 100% en contenedores de tamaño específico*/
     text-decoration: #2d0157;
 }
 
+/* seccion inicia sesion
+se modifica solo el boton de registrarse por el tamaño */
+
+.submit2 {
+    height: 60%;
+    width: 60%;
+    font-size: medium;
+}
 
 /*footer, aplica grid para acomodar logo, derechos e íconos*/
 
@@ -455,9 +467,6 @@ footer {
     grid-template-columns: 20% 75% 2.5% 2.5% ;
     grid-template-rows: 30% 70%;
 }
-/* .derechos {
-    padding: 30px 480px 0px 480px;
-}  */
 .derechos {
     grid-column: 1/5;
     grid-row: 2;
@@ -482,52 +491,72 @@ footer {
     justify-content: space-evenly;
 }
 
-
 /*Responsive*/
 
 @media screen and (max-width:900px) {
-    
-/*header responsive*/
-.registratehead {
-    margin-left: 10px;
-    }
-.pinshead {
-     margin-left: 5px;
-    }
+
+    /*     
+header responsive
+menu hamburguesa para despliegue en el header */
+
+.head {
+    position: absolute;
+    top: 60px;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s ease all;
+    transform: translateX(-100%);
+    background-color: rgb(216, 0, 119, 0.9);
+}
+.head.open{
+    transform: translateX(0);
+}
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+/* lineas de menu hamburguesa */
+.hamburguesa span{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+}
+/* lineas del menu hamburguesa con función de cruz para el cierre */
+.hamburguesa.open > span{
+    transform: rotate(45deg) translate(0px, 0px);
+}
+.hamburguesa.open > span:nth-child(2){
+    display: 0;
+    opacity: 0;
+}
+.hamburguesa.open > span:nth-child(3){
+    transform: rotate(-45deg) translate(0px, 0px);
+}
+
 
 /*body index responsive*/
 /*box1*/
 .container {
-        margin-left: 10%;
-        display: grid;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 50% 50%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
     }
-    .slider-text1 {
-        font-size: medium;
-        padding: 10px;
-        margin-top: 10px;
-        margin-left: 10%;
-        grid-row: 2/2;
-    }
-    .slider-text2 {
-        font-size: medium;
-        padding: 10px;
-        grid-column: 2/3;
-        margin-top: 10px;
-        margin-left: 10%;
-        grid-row: 2/2;
-    }
     .ruta {
-        width: 100%;
-        margin-right: 0%;
-        margin-left: 50%;
-        grid-column: 2/1;
-        grid-row: 1/2;
+        width: 80%;
+        height: 140px;
+        margin-left: 10%;
 
 }
-/*box2*/
+/*box3 contenedor del cuadro de ¿como junto millas?*/
 .conocenos {
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
@@ -550,7 +579,6 @@ footer {
     background-color: #ffd739;
     grid-row: 2/4;
     font-weight: 700;
-    margin-bottom: 10px;
     color: #2d0157;
     grid-column: 1/6;
 }
@@ -570,7 +598,7 @@ footer {
     grid-column: 1/6;
 }
 .comencemos {
-    margin-left: 30%;
+    margin-left: 40%;
 }
 
 /*footer responsive*/
@@ -579,19 +607,16 @@ footer {
     display: grid;
     grid-template-columns: 45% 40% 7% 7% ;
 }
-.derechos {
-    margin-left: 15%;
-}
 .ig {
     grid-column: 3/4;
     align-items: right;
-    width: 100%;
+    width: 90%;
     justify-content: space-evenly;
 }
 .fb {
     grid-column: 4/4;
     grid-row: 1/2;
-    width: 100% ;
+    width: 90% ;
     justify-content: space-evenly;
 }
 
@@ -614,6 +639,13 @@ footer {
 .formulario-ok {
 margin: 10%;
 }
+/* sección inicia sesion responsive */
+/* 
+solo se modifica el botón de registrarse */
 
+.submit2 {
+    height: 70%;
+    width: 60%;
+}
 
 }

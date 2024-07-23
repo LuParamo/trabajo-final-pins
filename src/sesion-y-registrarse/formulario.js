@@ -1,29 +1,16 @@
-import "./estilos.css"
-import Footer from './footer.jsx'
 import React, { useState } from 'react'
 
-const Registrate = () => {
-    return (
-        <div className="Registrate">
-            <Formulario />
-            <React.Fragment>
-            <h2 class="formulario-ok">Una vez que recibamos tus datos te enviaremos un mail de confirmación de alta</h2>
-            </React.Fragment>
-            <Footer />
-        </div>
-
-    )
-}
-
 const Formulario = () => {
+    // array de ciudades segun la provincia que se elija
     const Ciudad = [
-        ["-", "Capital", "Alta Gracia", "Carlos Paz", "Rio Tercero", "Rio Cuarto", "Villa Maria"], // Provincia 1 (Córdoba)
-        ["-", "Capital Federal", "Tandil", "La Plata", "Merlo", "Pilar"], // Provincia 2 (Buenos Aires)
-        ["-", "San Fernando del Valle de Catamarca", "Fray Mamerto Esquiú", "Recreo", "Tinogasta"], // Provincia 3 (Catamarca)
-        ["-", "Salta", "Tartagal", "Cafayate", "Cachi", "Iruya"], // Provincia 4 (Salta)
-        ["-", "Capital", "San Rafael", "Lujan de Cuyo", "Guaymallen", "San Martin"], // Provincia 5 (Mendoza)
-        ["-", "Bariloche", "Cipolletti", "Godoy", "Villa Regina"], // Provincia 6 (Río Negro)
-        ["-", "Rio Grande", "San Sebatián", "Tolhuin", "Ushuaia"] // Provincia 7 (Tierra del Fuego)
+        [],
+        ["Capital", "Alta Gracia", "Carlos Paz", "Rio Tercero", "Rio Cuarto", "Villa Maria"], // Provincia 1 (Córdoba)
+        ["Capital Federal", "Tandil", "La Plata", "Merlo", "Pilar"], // Provincia 2 (Buenos Aires)
+        ["San Fernando del Valle de Catamarca", "Fray Mamerto Esquiú", "Recreo", "Tinogasta"], // Provincia 3 (Catamarca)
+        ["Salta", "Tartagal", "Cafayate", "Cachi", "Iruya"], // Provincia 4 (Salta)
+        ["Capital", "San Rafael", "Lujan de Cuyo", "Guaymallen", "San Martin"], // Provincia 5 (Mendoza)
+        ["Bariloche", "Cipolletti", "Godoy", "Villa Regina"], // Provincia 6 (Río Negro)
+        ["Rio Grande", "San Sebatián", "Tolhuin", "Ushuaia"] // Provincia 7 (Tierra del Fuego)
       ];
 
     const [nombre, setNombre] = useState('')
@@ -32,7 +19,7 @@ const Formulario = () => {
     const [direccion, setDireccion] = useState('')
     const [telefono, setTelefono] = useState('')
     const [correo, setCorreo] = useState('')
-    const [provincia, setProvincia] = useState(0);
+    const [provincia, setProvincia] = useState('');
     const [ciudad, setCiudad] = useState('');
     const [errores, setErrores] = useState({})
     const [estaChequeado, setEstaChequeado] = useState(false)
@@ -145,6 +132,7 @@ return (
             />
             {errores.telefono && <span style={{ color: 'red' }}>{errores.telefono}</span>}
         </div>
+        {/* selects de ciudad y provincia anidados para modificarse segun que provincia se seleccione */}
         <form className="box" name="f1" action="#">
         <select value={provincia} onChange={cambioProvincia} name="provincia" className="item6">
           <option value="0">Provincia</option>
@@ -159,6 +147,7 @@ return (
       </form>
       <form className="box" name="f2" action="#">
         <select value={ciudad} onChange={cambioCiudad} name="Ciudad" className="item9">
+            {/* ciudad trae el array de ciudades al selector */}
           <option value="">Ciudad</option>
           {Ciudad[provincia] && Ciudad[provincia].map((ciudad, index) => (
             <option key={index} value={ciudad}>{ciudad}</option>
@@ -200,9 +189,7 @@ return (
         <button type="submit" className="submit" onSubmit={manejarEnvioForm} >Enviar</button>
     </form>
 </div>
-
 )
-
 }
 
-export default Registrate
+export default Formulario

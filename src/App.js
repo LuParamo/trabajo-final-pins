@@ -2,10 +2,10 @@ import React from 'react'
 import "./estilos.css"
 import {Routes, Route, Navigate } from 'react-router-dom'
 import Header from './header'
-import Pins from './Pins'
-import Registrate from './Registrate'
+import Pins from './Pins/Pins'
+import Registrate from './sesion-y-registrarse/Registrate'
 import Home from './Home'
-import IniciarSesion from './Iniciarsesion'
+import IniciarSesion from './sesion-y-registrarse/Iniciarsesion'
 
 
 function App ()  {

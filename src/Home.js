@@ -18,7 +18,7 @@ const Home = () => {
     ];
 
     return (
-<<<<<<< HEAD
+
       <div className="Home">
         <div className='container'>
           <div>
@@ -41,7 +41,6 @@ const Home = () => {
             <p>Canjeá tus millas para viajar a miles de destinos.
               ¡Viajá con millas, viajá con Pins!</p>
             <br />
-
             <p>Registrate gratis y comenzá a vivir tu próximo destino.</p>
 
           </div>
@@ -56,49 +55,6 @@ const Home = () => {
         </React.Fragment>
         <Footer />
       </div>
-=======
-    <div className="Home">
-      <div className='container'>
-        <div>
-            <Slider imagenes={imgslider}/>
-            {/* Todos los estilos y componentes del slider estan en la carpeta compslider */}
-        </div>
-        <div >
-        <img className="ruta" src={Ruta} alt="banner" />
-        </div>
-      </div>
-      {/* todo el body del index.html se encuentra en los react.fragments */}
-      <React.Fragment>
-  <div className="presentación">
-    <h2 class="titulopres">¡Con Pins descubrí una nueva forma de ahorrar para tu próximo viaje!</h2>
-    <br />
-    <p className="subtit">Pins es el programa de millas que creamos especialmente para los amantes de los viajes y las colecciones.</p>
-    <br />            
-    <p>Podés acumular millas a través de varias formas: ya sea comprando un pin individual, comprando colecciones de destinos, o suscribiéndote al Club Pins, donde recibís puntos todos los meses para canjear y obtenés beneficios exclusivos.</p>
-    <br />
-    <p>Canjeá tus millas para viajar a miles de destinos.
-    ¡Viajá con millas, viajá con Pins!</p>
-    <br />            
-        
-    <p>Registrate gratis y comenzá a vivir tu próximo destino.</p>
-
-</div>
-  <div className="conocenos">
-    <h3 className="millas">¿Cómo junto millas?</h3>
-    <p1 className="p1">1. Registrate y coleccioná los Pins que más te gusten</p1>
-    <p2 className="p2">2. Cada Pin suma la cantidad de millas indicada</p2>
-    <p3 className="p3">3. Juntá millas y canjealas por tu destino favorito</p3>
-    </div>
-    {/* boton comencemos te lleva a la pestaña de registro */}
-    <a className="comencemos" href="Registrate">Comencemos</a>
-    </React.Fragment>
-    <Footer />
-  </div>
->>>>>>> bb8bada7678879332f89aca9ef5c968d3e3b6855
-
-  )
-
-
-}
+)}
 
 export default Home;

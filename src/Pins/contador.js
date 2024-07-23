@@ -11,12 +11,9 @@ const Contador =() => {
         if (contador < 10) {
             setContador(contador + 1);
         } else {
-<<<<<<< HEAD
-            alert("Ya sumaste la cantidad máxima de productos, no puedes añadir más."); 
+             alert("Ya sumaste la cantidad máxima de productos, no puedes añadir más."); 
                 // alerta de que no pueden ir mas de 10 productos 
-=======
             alert("Ya sumaste la cantidad máxima de productos, no puedes añadir más.");
->>>>>>> bb8bada7678879332f89aca9ef5c968d3e3b6855
     }}
     const decrementar = () => {
         if (contador > 0) {

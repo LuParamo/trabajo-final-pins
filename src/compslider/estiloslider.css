@@ -15,3 +15,16 @@
     height: 200px;
     width: 500px;
 }
+
+
+@media screen and (max-width:900px) {
+    .containerslider {
+        margin-left: 20%;
+    }
+    .sliderimg {
+        border-radius: 20px;
+        height: 140px;
+        width: 100%;
+    }
+
+}
